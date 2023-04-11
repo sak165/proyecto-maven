@@ -7,7 +7,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import model.Producto;
-
+import model.Usuario;
 
 public class JPATest02 {
 
@@ -26,7 +26,7 @@ public class JPATest02 {
 		System.out.println("Lista de producto:");
 		System.out.println("-----------------");
 		for(Producto p: lstProducto){
-			System.out.println("Producto: "+p.getDesProd()+ "/ " +p.getEstProd() + "/ "+ p.getPreProd());
+			System.out.println("usuario: "+p.getDesProd()+ " " +p.getEstProd() + " "+ p.getPreProd());
 		}
 		System.out.println("==============================================");
 
