@@ -23,7 +23,7 @@ public class JPATest02 {
 		System.out.println("==============================================");
 		
 		/*Listar todos los usuarios*/
-		System.out.println("Lista de producto:");
+		System.out.println("Lista de productos:");
 		System.out.println("-----------------");
 		for(Producto p: lstProducto){
 			System.out.println("Producto: "+p.getDesProd()+ "/ " +p.getEstProd() + "/ "+ p.getPreProd());

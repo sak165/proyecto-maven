@@ -22,7 +22,7 @@ public class JPATest01 {
 		System.out.println("==============================================");
 		
 		/*Listar todos los usuarios*/
-		System.out.println("Lista de usuarios de proyectos :");
+		System.out.println("Lista de usuarios de proyecto :");
 		System.out.println("-----------------");
 		for(Usuario u: lstUsuarios){
 			System.out.println("usuario: "+u.getNomUsua()+ " " + u.getApeUsua()+ " "+ u.getClaUsua());
