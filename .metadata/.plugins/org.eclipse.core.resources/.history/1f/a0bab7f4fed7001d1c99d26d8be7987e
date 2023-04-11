@@ -1,0 +1,35 @@
+package app;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import model.Producto;
+import model.Usuario;
+
+public class JPATest02 {
+
+	public static void main(String[] args) {
+		EntityManagerFactory fabrica = Persistence.createEntityManagerFactory("JPA_sesion02");
+		EntityManager em = fabrica.createEntityManager();
+
+		List<Producto> lstProducto = em.createQuery("Select a From Producto p", Producto.class).getResultList();
+		System.out.println("==============================================");
+		
+		/*Mostrar cantidad de usuarios*/
+		System.out.println("nr de productos:" +lstProducto.size());
+		System.out.println("==============================================");
+		
+		/*Listar todos los usuarios*/
+		System.out.println("Lista de producto:");
+		System.out.println("-----------------");
+		for(Producto p: lstProducto){
+			System.out.println("usuario: "+p.getDesProd()+ " " +p.getEstProd() + " "+ p.getPreProd());
+		}
+		System.out.println("==============================================");
+
+	}
+
+}
